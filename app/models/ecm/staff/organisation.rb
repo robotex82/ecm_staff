@@ -1,4 +1,4 @@
-class Ecm::Staff::Organisation < ActiveRecord::Base
+class Ecm::Staff::Organisation < Ecm::Staff::Base
   # associations
   has_many :business_units
 
@@ -8,4 +8,8 @@ class Ecm::Staff::Organisation < ActiveRecord::Base
   # validations
   validates :name, :presence => true,
                   :uniqueness => true
-end # class Ecm::Staff::Organisation < ActiveRecord::Base
+
+  def to_s
+    name
+  end # def
+end # class Ecm::Staff::Organisation < Ecm::Staff::Base

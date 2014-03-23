@@ -1,9 +1,12 @@
-class Ecm::Staff::BusinessUnit < ActiveRecord::Base
+class Ecm::Staff::BusinessUnit < Ecm::Staff::Base
   # associations
   belongs_to :organisation
 
   # attributes
-  attr_accessible :description, :name
+  attr_accessible :description,
+                  :name,
+                  :organisation_id,
+                  :parent_id
 
   # nested set support
   acts_as_nested_set
@@ -12,4 +15,8 @@ class Ecm::Staff::BusinessUnit < ActiveRecord::Base
   validates :organisation, :presence => true
   validates :name, :presence => true,
                    :uniqueness => { :scope => [ :organisation_id ] }
-end # class Ecm::Staff::BusinessUnit < ActiveRecord::Base
+
+  def to_s
+    name
+  end # def
+end # class Ecm::Staff::BusinessUnit < Ecm::Staff::Base

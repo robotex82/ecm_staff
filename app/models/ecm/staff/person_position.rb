@@ -1,4 +1,4 @@
-class Ecm::Staff::PersonPosition < ActiveRecord::Base
+class Ecm::Staff::PersonPosition < Ecm::Staff::Base
   # associations
   has_one    :organisation, :through => :business_unit
   belongs_to :business_unit
@@ -20,4 +20,4 @@ class Ecm::Staff::PersonPosition < ActiveRecord::Base
   validates :business_unit, :presence => true
   validates :person,        :presence => true
   validates :position,      :presence => true
-end # class Ecm::Staff::PersonPosition < ActiveRecord::Base
+end # class Ecm::Staff::PersonPosition < Ecm::Staff::Base

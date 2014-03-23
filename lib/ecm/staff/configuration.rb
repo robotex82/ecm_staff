@@ -17,6 +17,7 @@ module Ecm
 
       def self.person_class_name=(class_name)
         raise PersonClassNotDefinedError unless Object.const_defined?(class_name)
+        @@person_class_name = class_name.constantize
       end # def
     end # module Configuration
   end # module Staff

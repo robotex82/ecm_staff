@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe Ecm::Staff::Position do
   describe "Associations" do
+    it { should have_many(:person_positions) }
+    it { should have_many(:people) }
   end # describe "Associations"
 
   describe "Nested set support" do

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "ActiveRecord::Base models" do
-  ActiveRecord::Base.descendants.map(&:to_s).reject() { |m| %w(ActiveAdmin::Comment AdminUser).include?(m) }.each do |model_name|
+  ActiveRecord::Base.descendants.map(&:to_s).reject() { |m| %w(ActiveAdmin::Comment AdminUser Ecm::Staff::Base).include?(m) }.each do |model_name|
     model = model_name.constantize
     describe model do
       it "should be an ActiveRecord::Base" do
@@ -31,4 +31,3 @@ describe "ActiveRecord::Base models" do
     end
   end
 end
-

@@ -1,11 +1,10 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :person_position do
-    person nil
-    business_unit nil
-    position nil
-    begin_at "2014-03-16"
-    end_at "2014-03-16"
+  factory :ecm_staff_person_position, :class => Ecm::Staff::PersonPosition do
+    association :person, :factory => :person
+    association :business_unit, :factory => :ecm_staff_business_unit
+    association :position, :factory => :ecm_staff_position
+    begin_at 1.year.ago
   end
 end

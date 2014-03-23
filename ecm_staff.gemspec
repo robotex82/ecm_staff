@@ -22,6 +22,10 @@ Gem::Specification.new do |s|
   # Development Server
   s.add_development_dependency "thin"
 
+  # Development Tools
+  s.add_development_dependency "quiet_assets"
+  s.add_development_dependency "i18n_generators"
+
   # Documentation
   s.add_development_dependency "yard"
 

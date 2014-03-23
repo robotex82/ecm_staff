@@ -9,6 +9,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require
+require "quiet_assets"
 require "activeadmin"
 require "i18n_routing"
 require "ecm_staff"
@@ -37,7 +38,7 @@ module Dummy
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    #    config.i18n.default_locale = 'en'
     config.i18n.available_locales = [ :de, :en ]
     config.i18n.default_locale = :de
 
