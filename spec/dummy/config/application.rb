@@ -9,10 +9,14 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require
+require "rails_erd"
 require "quiet_assets"
 require "activeadmin"
 require "i18n_routing"
 require "ecm_staff"
+require "less-rails"
+require "twitter-bootstrap-rails"
+require "yaml_db"
 
 module Dummy
   class Application < Rails::Application
@@ -35,6 +39,8 @@ module Dummy
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
     config.time_zone = 'Europe/Berlin'
+
+    config.i18n.enforce_available_locales = true
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]

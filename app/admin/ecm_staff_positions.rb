@@ -1,4 +1,10 @@
 ActiveAdmin.register Ecm::Staff::Position do
+  menu :parent => Proc.new { I18n.t('ecm.staff.active_admin.menu') }.call
+
+  # Nested set settings
+  config.sort_order = 'lft_asc'
+  sortable_tree_member_actions
+
   form do |f|
     f.inputs do
       f.input :parent, :as => :select, :collection => nested_set_options(Ecm::Staff::Position, f.object) { |p| "#{'&#160;&#160;&#160;&#160;' * p.depth}&bull; #{p.to_s}".html_safe }
@@ -18,7 +24,8 @@ ActiveAdmin.register Ecm::Staff::Position do
 
   index do
     selectable_column
-    column :name
+    sortable_tree_columns
+    sortable_tree_indented_column :name
     column :people_count
     column :description
     column :created_at

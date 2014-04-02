@@ -15,4 +15,3 @@ module ActiveAdmin::SignInHelper
     find(:xpath, '//input[@type="submit"]').click
   end
 end
-

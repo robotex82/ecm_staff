@@ -47,4 +47,3 @@ feature 'admin area' do
     end
   end # describe 'logout'
 end # feature
-

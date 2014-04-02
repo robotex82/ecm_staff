@@ -6,9 +6,10 @@ Dummy::Application.routes.draw do
 
       Ecm::Staff::Routing.routes(self)
 
+      resources :people
+
       # Prevent errors, when using root_path
       root :to => 'home#index'
     end # scope
   end # localized
 end # Dummy::Application.routes.draw
-

@@ -1,4 +1,8 @@
+require 'active_admin-awesome_nested_set'
+require 'acts_as_markup'
+require 'acts_as_published'
 require 'awesome_nested_set'
+require 'friendly_id'
 
 require 'ecm/staff/engine'
 require 'ecm/staff/exceptions'

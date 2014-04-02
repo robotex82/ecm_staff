@@ -17,6 +17,13 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2.13"
 
+  # ecm_staff
+  s.add_dependency "active_admin-awesome_nested_set", ">= 0.0.5"
+  s.add_dependency "acts_as_markup"
+  s.add_dependency "acts_as_published"
+  s.add_dependency 'awesome_nested_set'
+  s.add_dependency "friendly_id"
+
   s.add_development_dependency "sqlite3"
 
   # Development Server
@@ -25,21 +32,27 @@ Gem::Specification.new do |s|
   # Development Tools
   s.add_development_dependency "quiet_assets"
   s.add_development_dependency "i18n_generators"
+  s.add_development_dependency "yaml_db"
 
   # Documentation
   s.add_development_dependency "yard"
+  s.add_development_dependency "rails-erd"
 
   # Dummy app
-  s.add_development_dependency 'activeadmin'
+  s.add_development_dependency 'activeadmin', '0.5.1'
+  # s.add_development_dependency 'activeadmin', '< 0.6.3'
   s.add_development_dependency 'sass-rails'
   s.add_development_dependency 'coffee-rails'
   s.add_development_dependency 'i18n_routing'
+  s.add_development_dependency 'therubyracer'
+  s.add_development_dependency 'less-rails'
+  s.add_development_dependency 'twitter-bootstrap-rails'
 
   # Localization
   s.add_development_dependency 'localeapp'
 
   # Tests
-  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'capybara', '< 2.0.0'
   s.add_development_dependency 'rspec-rails', '~> 2.0'
   s.add_development_dependency 'shoulda-matchers'
   s.add_development_dependency 'factory_girl_rails', '~> 1.0'
@@ -50,6 +63,9 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'guard-rspec'
   s.add_development_dependency 'guard-bundler'
 
-  # ecm_staff
-  s.add_dependency 'awesome_nested_set'
+  # ruby 1.8.7
+  s.add_development_dependency 'nokogiri', '< 1.6.0'
+  s.add_development_dependency 'rubyzip', '< 1.0.0'
+  s.add_development_dependency 'devise', '< 3.0.0'
+  s.add_development_dependency 'inherited_resources', '< 1.4.1'
 end

@@ -1,4 +1,6 @@
 ActiveAdmin.register Ecm::Staff::PersonPosition do
+  menu :parent => Proc.new { I18n.t('ecm.staff.active_admin.menu') }.call
+
   form do |f|
     f.inputs do
       f.input :person
@@ -20,8 +22,8 @@ ActiveAdmin.register Ecm::Staff::PersonPosition do
 
   index do
     selectable_column
-    column :person
     column :position
+    column :person
     column :organisation
     column :business_unit
     column :begin_at

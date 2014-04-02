@@ -3,4 +3,3 @@ class HomeController < ApplicationController
     render :text => 'Placeholder'
   end
 end
-

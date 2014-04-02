@@ -7,10 +7,18 @@ de:
 
   activerecord:
     models:
-      ecm/staff/business_unit: Abteilung
-      ecm/staff/organisation: Unternehmen
-      ecm/staff/person_position: Besetzte Position
-      ecm/staff/position: Position
+      ecm/staff/business_unit:
+        one: Abteilung
+        other: Abteilungen
+      ecm/staff/organisation:
+        one: Unternehmen
+        other: Unternehmen
+      ecm/staff/person_position:
+        one: Besetzte Position
+        other: Besetzte Positionen
+      ecm/staff/position:
+        one: Position
+        other: Positionen
 
     attributes:
 
@@ -32,3 +40,14 @@ de:
       ecm/staff/position:
         parent: Übergeordnete Position
         people_count: Personen
+
+  ecm:
+    staff:
+      active_admin:
+        menu: Mitarbeiter
+
+  resources:
+    ecm_staff_business_units: abteilungen
+    ecm_staff_organisations: unternehmen
+    ecm_staff_person_positions: besetzte-positionen
+    ecm_staff_positions: positionen
