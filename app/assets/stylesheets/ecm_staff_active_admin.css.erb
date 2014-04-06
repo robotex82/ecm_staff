@@ -1,0 +1,12 @@
+.preview-picture-placeholder {
+  height: <%= Ecm::Pictures::Configuration.picture_image_styles[:medium_thumb].split("x").first %>px;
+  width:  <%= Ecm::Pictures::Configuration.picture_image_styles[:medium_thumb].split("x").last %>px;
+  text-align: center;
+  font-size: 64px !important;
+  line-height: <%= Ecm::Pictures::Configuration.picture_image_styles[:medium_thumb].split("x").first %>px;
+  padding: 0px;
+  background-color: #F5F5F5;
+  border: 1px solid #E3E3E3 !important;
+  border-radius: 4px;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.05) inset;
+}

@@ -51,7 +51,7 @@
             <ul class="nav">
               <li><%= link_to Ecm::Staff::Organisation.model_name.human(:count => :other), ecm_staff_organisations_path  %></li>
               <li><%= link_to Ecm::Staff::BusinessUnit.model_name.human(:count => :other), ecm_staff_business_units_path  %></li>
-              <li><%= link_to Person.model_name.human(:count => :other), people_path  %></li>
+              <li><%= link_to Ecm::Staff::Person.model_name.human(:count => :other), ecm_staff_people_path  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

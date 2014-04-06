@@ -2,15 +2,27 @@ en:
   attributes:
     created_at: created at
     description: description
+    markup_language: markup language
     name: name
     updated_at: updated at
 
   activerecord:
     models:
-      ecm/staff/business_unit: business unit
-      ecm/staff/organisation: organisation
-      ecm/staff/person_position: person position
-      ecm/staff/position: position
+      ecm/staff/business_unit:
+        one: business unit
+        other: business units
+      ecm/staff/organisation:
+        one: organisation
+        other: organisations
+      ecm/staff/person:
+        one: person
+        other: people
+      ecm/staff/person_position:
+        one: person position
+        other: person positions
+      ecm/staff/position:
+        one: position
+        other: positions
 
     attributes:
 
@@ -20,6 +32,13 @@ en:
 
       ecm/staff/organisation:
         business_units: sub organisations
+
+      ecm/staff/person:
+        birthdate: date of birth
+        firstname: firstnam
+        lastname: lastname
+        position: position
+        prefix: prefix
 
       ecm/staff/person_position:
         begin_at: begin at
@@ -32,3 +51,15 @@ en:
       ecm/staff/position:
         parent: parent position
         people_count: people
+
+  ecm:
+    staff:
+      active_admin:
+        menu: staff
+
+  resources:
+    ecm_staff_business_units: business-units
+    ecm_staff_organisations: organisations
+    ecm_staff_people: people
+    ecm_staff_person_positions: person-positions
+    ecm_staff_positions: positions

@@ -1,7 +1,7 @@
 
---- 
-admin_users: 
-  columns: 
+---
+admin_users:
+  columns:
   - id
   - email
   - encrypted_password
@@ -15,24 +15,101 @@ admin_users:
   - last_sign_in_ip
   - created_at
   - updated_at
-  records: 
+  records:
   - - 1
     - admin@example.com
     - $2a$10$KzU5TrwoumDmzkEtOHguKOjtQR002xdocmJYxJPOf7qvDSl4FcasC
-    - 
-    - 
-    - 
-    - 1
-    - 2014-04-02 14:02:18.627260
+    -
+    -
+    -
+    - 2
+    - 2014-04-06 10:44:01.633971
     - 2014-04-02 14:02:18.627260
     - 192.168.0.36
     - 192.168.0.36
     - 2014-03-25 21:22:42.040866
-    - 2014-04-02 14:02:18.628413
+    - 2014-04-06 10:44:01.635863
 
---- 
-ecm_staff_organisations: 
-  columns: 
+---
+ecm_staff_people:
+  columns:
+  - id
+  - prefix
+  - firstname
+  - lastname
+  - created_at
+  - updated_at
+  records:
+  - - 1
+    - Herr
+    - Roberto
+    - Vasquez Angel
+    - 2014-04-02 16:42:02.446484
+    - 2014-04-06 13:07:13.355278
+  - - 2
+    -
+    - Jennifer
+    - Dreis
+    - 2014-04-02 16:42:12.860876
+    - 2014-04-02 16:42:12.860876
+  - - 3
+    -
+    - Christoph
+    - "B\xC3\xB6nning"
+    - 2014-04-02 16:42:30.458903
+    - 2014-04-02 16:42:30.458903
+  - - 4
+    -
+    - Heiko
+    - Albrecht
+    - 2014-04-02 18:30:22.610448
+    - 2014-04-02 18:30:22.610448
+  - - 5
+    -
+    - Verena
+    - Siemes
+    - 2014-04-02 18:32:13.792585
+    - 2014-04-02 18:32:13.792585
+  - - 6
+    -
+    - Eugen
+    - "M\xC3\xBCller"
+    - 2014-04-02 18:34:34.243021
+    - 2014-04-02 18:34:34.243021
+  - - 7
+    -
+    - Thomas
+    - Fassbender
+    - 2014-04-02 19:11:16.823138
+    - 2014-04-02 19:11:16.823138
+  - - 8
+    -
+    - Nicole
+    - Fassbender
+    - 2014-04-02 19:11:26.136831
+    - 2014-04-02 19:11:26.136831
+  - - 9
+    -
+    - Sven
+    - Steitz
+    - 2014-04-02 19:11:47.658542
+    - 2014-04-02 19:11:47.658542
+  - - 10
+    -
+    - Jochen
+    - Schulz
+    - 2014-04-02 19:12:01.497763
+    - 2014-04-02 19:12:01.497763
+  - - 11
+    -
+    - Michael
+    - "Sch\xC3\xB6berl"
+    - 2014-04-02 19:12:14.931571
+    - 2014-04-02 19:12:14.931571
+
+---
+ecm_staff_organisations:
+  columns:
   - id
   - name
   - description
@@ -40,14 +117,24 @@ ecm_staff_organisations:
   - slug
   - created_at
   - updated_at
-  records: 
+  records:
   - - 1
     - Art der Gestaltung
-    - ""
+    - "h3. 365 Tage \xE2\x80\x93 360 Grad-Kommunikation.\r\n\
+      \r\n\
+      Willkommen bei der Werbeagentur Art der Gestaltung. Bei uns dreht sich alles um Full Service Kommunikation. Wir arbeiten 360 Grad, denken ergebnisorientiert, verlieren die kreative, au\xC3\x9Fergew\xC3\xB6hnliche Idee aber nie aus den Augen. Wir entwickeln professionelle Markenkommunikation. Aufmerksamkeitsstark umgesetzt und anwendbar in allen modernen Medien \xE2\x80\x93 sowohl online als auch offline. Und das Tag f\xC3\xBCr Tag.\r\n\
+      \r\n\
+      h3. Unser Prinzip: Freude.\r\n\
+      \r\n\
+      Klar, Werbung muss bei der Zielgruppe ankommen. Sie muss verst\xC3\xA4ndlich sein. Eine modern gef\xC3\xBChrte Marke muss aber auch Freude bereiten. Den Kunden. Aber auch Ihnen, dem Unternehmen. Mit diesem Verst\xC3\xA4ndnis arbeiten wir. Um zielgruppengenaue Kampagnen zu entwickeln, lernen wir unsere Kunden zun\xC3\xA4chst genau kennen. Wir h\xC3\xB6ren Ihnen zu, um Ihre Sichtweisen und Werte in unsere Ideenfindung einflie\xC3\x9Fen zu lassen. So verstehen wir nicht nur was Sie zu sagen haben, sondern auch was Ihr Unternehmen einzigartig macht. Das so aufgebaute Vertrauensverh\xC3\xA4ltnis bildet die Basis unserer kreativen Arbeit \xE2\x80\x93 die Entwicklung tragf\xC3\xA4higer und individueller Kommunikation.\r\n\
+      \r\n\
+      h3. Quer denken. Geradlinig umsetzen.\r\n\
+      \r\n\
+      Unser junges Team eint die Begeisterung f\xC3\xBCr das \xC3\x9Cberraschende in der Werbung. Und weil in Begeisterung das Wort \xE2\x80\x9EGeist\xE2\x80\x9C steckt, erhalten Sie von uns durchdachte Kommunikationsl\xC3\xB6sungen in allen Kan\xC3\xA4len."
     - textile
     - art-der-gestaltung
     - 2014-04-02 16:26:44.061109
-    - 2014-04-02 16:26:44.061109
+    - 2014-04-02 18:57:34.475427
   - - 2
     - IT Services Frankfurt
     - ""
@@ -57,15 +144,35 @@ ecm_staff_organisations:
     - 2014-04-02 16:27:01.051452
   - - 3
     - ANWR Group eG
-    - ""
+    - "h3. WIR \xE2\x80\xA6 stellen uns vor\r\n\
+      \r\n\
+      Knapp 600 Mitarbeiter in 14 L\xC3\xA4ndern unterst\xC3\xBCtzen Kooperationssysteme f\xC3\xBCr selbstst\xC3\xA4ndige Einzel- und Gro\xC3\x9Fh\xC3\xA4ndler dabei, erfolgreich im Wettbewerb zu bestehen. Entstanden ist die ANWR GROUP aus der 1919 in Hamburg gegr\xC3\xBCndeten NORD-WEST Schuhwareneinkaufsgenossenschaft eG.\r\n\
+      \r\n\
+      Mit einem Gesch\xC3\xA4ftsvolumen von \xC3\xBCber 7,8 Milliarden Euro sowie 6.000 angeschlossenen H\xC3\xA4ndlern aus der Schuh-, Sport- und Lederwarenbranche z\xC3\xA4hlt die ANWR GROUP zu den erfolgreichsten kooperativen Unternehmernetzwerken in Europa. Unsere Zentrale in Mainhausen f\xC3\xBChrt die Gruppe strategisch und finanziell. "
     - textile
     - anwr-group-eg
     - 2014-04-02 16:27:13.730323
-    - 2014-04-02 16:27:13.730323
+    - 2014-04-02 18:58:22.501245
+  - - 4
+    - Fahrschule Skydrive
+    - "Freundlichkeit, Kompetenz, Geduld, systematischer, p\xC3\xA4dagogischer Aufbau, Spa\xC3\x9F und Ruhe bei der Ausbildung sorgen daf\xC3\xBCr das Du entspannt, sicher, schnell und effizient Dein Ziel erreichen wirst. Ein sicherer Verkehrsteilnehmer zu werden!\r\n\
+      \r\n\
+      Zufriedene Fahrsch\xC3\xBCler, die sich wohlf\xC3\xBChlen und am Ende gl\xC3\xBCcklich mit dem F\xC3\xBChrerschein unsere Fahrschule verlassen, sind der beste Garant, dass Du bei uns genau richtig bist\xE2\x80\xA6 h\xC3\xB6r Dich doch einfach mal um\xE2\x80\xA6"
+    - textile
+    - fahrschule-skydrive
+    - 2014-04-02 19:10:02.956891
+    - 2014-04-02 19:10:02.956891
+  - - 5
+    - Hewlett Packard GmbH
+    - ""
+    - textile
+    - hewlett-packard-gmbh
+    - 2014-04-06 11:28:27.244021
+    - 2014-04-06 11:28:27.244021
 
---- 
-ecm_staff_business_units: 
-  columns: 
+---
+ecm_staff_business_units:
+  columns:
   - id
   - organisation_id
   - name
@@ -78,40 +185,384 @@ ecm_staff_business_units:
   - depth
   - created_at
   - updated_at
-  records: 
+  records:
   - - 1
     - 3
     - Software Entwicklung Business Portale
     - ""
     - textile
     - software-entwicklung-business-portale
-    - 
+    - 3
+    - 4
+    - 5
     - 1
-    - 2
-    - 0
     - 2014-04-02 16:27:41.260610
-    - 2014-04-02 16:27:41.260610
+    - 2014-04-02 17:11:40.389409
   - - 2
     - 3
     - Business Development Business Portale
     - ""
     - textile
     - business-development-business-portale
-    - 
     - 3
-    - 4
-    - 0
+    - 2
+    - 3
+    - 1
     - 2014-04-02 16:28:03.760314
-    - 2014-04-02 16:28:03.760314
+    - 2014-04-02 16:36:13.804959
   - - 3
     - 3
     - ITK
     - ""
     - textile
     - itk
-    - 
-    - 5
+    -
+    - 1
     - 6
     - 0
     - 2014-04-02 16:28:20.433528
     - 2014-04-02 16:28:20.433528
+  - - 4
+    - 1
+    - Media and Design
+    - ""
+    - textile
+    - media-and-design
+    -
+    - 7
+    - 8
+    - 0
+    - 2014-04-02 18:59:26.239863
+    - 2014-04-02 18:59:26.239863
+  - - 7
+    - 4
+    - Fahrschulmanagement
+    - ""
+    - textile
+    - fahrschulmanagement
+    -
+    - 9
+    - 10
+    - 0
+    - 2014-04-02 19:13:04.140005
+    - 2014-04-02 19:13:04.140005
+  - - 8
+    - 4
+    - Ausbildung
+    - ""
+    - textile
+    - ausbildung
+    -
+    - 11
+    - 12
+    - 0
+    - 2014-04-02 19:17:44.790225
+    - 2014-04-02 19:17:44.790225
+  - - 9
+    - 5
+    - BPO  Germany
+    - ""
+    - textile
+    - bpo-germany
+    -
+    - 13
+    - 14
+    - 0
+    - 2014-04-06 11:35:34.581583
+    - 2014-04-06 11:35:34.581583
+
+---
+ecm_staff_positions:
+  columns:
+  - id
+  - name
+  - description
+  - markup_language
+  - parent_id
+  - lft
+  - rgt
+  - depth
+  - slug
+  - created_at
+  - updated_at
+  records:
+  - - 1
+    - Creative Director
+    - ""
+    - textile
+    -
+    - 1
+    - 2
+    - 0
+    - creative-director
+    - 2014-04-02 16:43:09.264631
+    - 2014-04-02 16:43:09.264631
+  - - 2
+    - Managing Partner
+    - ""
+    - textile
+    -
+    - 3
+    - 4
+    - 0
+    - managing-partner
+    - 2014-04-02 16:43:25.791913
+    - 2014-04-02 19:00:32.498224
+  - - 3
+    - Team Lead
+    - ""
+    - textile
+    -
+    - 5
+    - 6
+    - 0
+    - team-lead
+    - 2014-04-02 16:43:42.865588
+    - 2014-04-02 16:43:42.865588
+  - - 4
+    - Senior Developer
+    - ""
+    - textile
+    -
+    - 7
+    - 10
+    - 0
+    - senior-developer
+    - 2014-04-02 16:44:05.227329
+    - 2014-04-02 16:44:05.227329
+  - - 5
+    - Junior Developer
+    - ""
+    - textile
+    - 4
+    - 8
+    - 9
+    - 1
+    - junior-developer
+    - 2014-04-02 16:44:18.326050
+    - 2014-04-02 16:44:18.326050
+  - - 6
+    - Business Developer
+    - ""
+    - textile
+    -
+    - 11
+    - 12
+    - 0
+    - business-developer
+    - 2014-04-02 18:30:38.990809
+    - 2014-04-02 18:30:38.990809
+  - - 7
+    - Bereichsleiterin
+    - ""
+    - textile
+    -
+    - 13
+    - 14
+    - 0
+    - bereichsleiterin
+    - 2014-04-02 18:32:31.606048
+    - 2014-04-02 18:33:20.740357
+  - - 8
+    - Fahrlehrer
+    - ""
+    - textile
+    -
+    - 15
+    - 16
+    - 0
+    - fahrlehrer
+    - 2014-04-02 19:12:36.132072
+    - 2014-04-02 19:12:36.132072
+  - - 9
+    - Inhaber
+    - ""
+    - textile
+    -
+    - 17
+    - 20
+    - 0
+    - inhaber
+    - 2014-04-02 19:13:53.524832
+    - 2014-04-02 19:13:53.524832
+  - - 10
+    - Management
+    - ""
+    - textile
+    - 9
+    - 18
+    - 19
+    - 1
+    - management
+    - 2014-04-02 19:15:18.229906
+    - 2014-04-02 19:15:18.229906
+  - - 11
+    - Business Systems Analyst
+    - ""
+    - textile
+    -
+    - 21
+    - 22
+    - 0
+    - business-systems-analyst
+    - 2014-04-06 11:28:07.149887
+    - 2014-04-06 11:28:07.149887
+
+---
+ecm_staff_person_positions:
+  columns:
+  - id
+  - person_id
+  - business_unit_id
+  - position_id
+  - begin_at
+  - end_at
+  - created_at
+  - updated_at
+  records:
+  - - 1
+    - 1
+    - 1
+    - 4
+    - "2014-03-01"
+    -
+    - 2014-04-02 17:18:37.545861
+    - 2014-04-02 17:18:37.545861
+  - - 2
+    - 4
+    - 2
+    - 6
+    - "2008-11-01"
+    -
+    - 2014-04-02 18:31:13.965431
+    - 2014-04-02 18:31:13.965431
+  - - 3
+    - 5
+    - 3
+    - 7
+    - "2013-10-01"
+    -
+    - 2014-04-02 18:33:07.320777
+    - 2014-04-02 18:33:07.320777
+  - - 4
+    - 6
+    - 1
+    - 4
+    - "2011-06-01"
+    -
+    - 2014-04-02 18:34:55.348420
+    - 2014-04-02 18:34:55.348420
+  - - 5
+    - 3
+    - 4
+    - 2
+    - "2007-01-01"
+    -
+    - 2014-04-02 19:00:19.129655
+    - 2014-04-02 19:00:19.129655
+  - - 6
+    - 2
+    - 4
+    - 2
+    - "2007-01-01"
+    -
+    - 2014-04-02 19:01:04.523221
+    - 2014-04-02 19:01:04.523221
+  - - 8
+    - 8
+    - 7
+    - 10
+    - "2011-01-01"
+    -
+    - 2014-04-02 19:15:29.865210
+    - 2014-04-02 19:15:29.865210
+  - - 9
+    - 9
+    - 8
+    - 8
+    - "2013-04-01"
+    -
+    - 2014-04-02 19:17:56.819858
+    - 2014-04-02 19:17:56.819858
+  - - 10
+    - 7
+    - 7
+    - 9
+    - "2011-01-01"
+    -
+    - 2014-04-02 19:23:00.700670
+    - 2014-04-02 19:23:11.517995
+  - - 11
+    - 10
+    - 8
+    - 8
+    - "2013-08-01"
+    -
+    - 2014-04-02 19:23:58.358061
+    - 2014-04-02 19:23:58.358061
+  - - 12
+    - 11
+    - 8
+    - 8
+    - "2014-01-01"
+    -
+    - 2014-04-02 19:24:21.090003
+    - 2014-04-02 19:24:21.090003
+  - - 13
+    - 1
+    - 9
+    - 11
+    - "2006-01-22"
+    - "2013-07-31"
+    - 2014-04-06 11:37:27.195922
+    - 2014-04-06 11:37:27.195922
+
+---
+ecm_pictures_pictures:
+  columns:
+  - id
+  - name
+  - description
+  - picture_gallery_id
+  - position
+  - markup_language
+  - slug
+  - image_file_name
+  - image_file_size
+  - image_content_type
+  - image_updated_at
+  - image_fingerprint
+  - created_at
+  - updated_at
+  records:
+  - - 1
+    - roberto.vasquez-angel
+    - ""
+    -
+    - 1
+    - textile
+    - roberto-vasquez-angel
+    - roberto.vasquez-angel.jpg
+    - 1393352
+    - image/jpeg
+    - 2014-04-06 11:11:03.883572
+    - db9e58f49fc7a39cc99eaf393380d223
+    - 2014-04-06 11:11:04.398776
+    - 2014-04-06 11:11:04.398776
+
+---
+ecm_pictures_attached_pictures:
+  columns:
+  - id
+  - ecm_pictures_picture_id
+  - pictureable_id
+  - pictureable_type
+  - created_at
+  - updated_at
+  records:
+  - - 1
+    - 1
+    - 1
+    - Person
+    - 2014-04-06 11:11:04.606330
+    - 2014-04-06 11:11:04.606330

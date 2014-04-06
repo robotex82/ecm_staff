@@ -19,9 +19,11 @@ Gem::Specification.new do |s|
 
   # ecm_staff
   s.add_dependency "active_admin-awesome_nested_set", ">= 0.0.5"
+  s.add_dependency "acts_as_list"
   s.add_dependency "acts_as_markup"
   s.add_dependency "acts_as_published"
-  s.add_dependency 'awesome_nested_set'
+  s.add_dependency "awesome_nested_set"
+  s.add_dependency "ecm_pictures", ">= 1.0.6.pre"
   s.add_dependency "friendly_id"
 
   s.add_development_dependency "sqlite3"
@@ -64,6 +66,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'guard-bundler'
 
   # ruby 1.8.7
+  s.add_development_dependency 'acts_as_list', '< 0.3.0'
   s.add_development_dependency 'nokogiri', '< 1.6.0'
   s.add_development_dependency 'rubyzip', '< 1.0.0'
   s.add_development_dependency 'devise', '< 3.0.0'

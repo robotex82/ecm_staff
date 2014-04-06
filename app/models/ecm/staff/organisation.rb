@@ -19,6 +19,7 @@ class Ecm::Staff::Organisation < Ecm::Staff::Base
                  :columns  => [ :description ]
 
   # validations
+  validates :markup_language, :inclusion => Ecm::Staff::Configuration.markup_languages.map(&:to_s)
   validates :name, :presence   => true,
                    :uniqueness => true
 

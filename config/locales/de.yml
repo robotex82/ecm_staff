@@ -2,6 +2,7 @@ de:
   attributes:
     created_at: Erstellt am
     description: Beschreibung
+    markup_language: Markup Sprache
     name: Name
     updated_at: Aktualisiert am
 
@@ -13,6 +14,9 @@ de:
       ecm/staff/organisation:
         one: Unternehmen
         other: Unternehmen
+      ecm/staff/person:
+        one: Person
+        other: Personen
       ecm/staff/person_position:
         one: Besetzte Position
         other: Besetzte Positionen
@@ -29,10 +33,17 @@ de:
       ecm/staff/organisation:
         business_units: Untergeordnete Abteilungen
 
+      ecm/staff/person:
+        birthdate: Geburtsdatum
+        firstname: Vorname
+        lastname: Nachname
+        position: Position
+        prefix: Namensprefix
+
       ecm/staff/person_position:
-        begin_at: Beginn
+        begin_at: Seit
         business_unit: Abteilung
-        end_at: Ende
+        end_at: Bis
         organisation: Unternehmen
         person: Person
         position: Position
@@ -49,5 +60,6 @@ de:
   resources:
     ecm_staff_business_units: abteilungen
     ecm_staff_organisations: unternehmen
+    ecm_staff_people: personen
     ecm_staff_person_positions: besetzte-positionen
     ecm_staff_positions: positionen

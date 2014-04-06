@@ -4,9 +4,8 @@ Dummy::Application.routes.draw do
       devise_for :admin_users, ActiveAdmin::Devise.config
       ActiveAdmin.routes(self)
 
+      Ecm::Pictures::Routing.routes(self)
       Ecm::Staff::Routing.routes(self)
-
-      resources :people
 
       # Prevent errors, when using root_path
       root :to => 'home#index'

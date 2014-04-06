@@ -1,0 +1,31 @@
+<div class="media person-preview well" id="<%= dom_id(person) %>">
+  <div class="preview-picture pull-left">
+    <% if person.preview_picture.present? %>
+      <%= link_to person do %>
+        <%= image_tag(person.preview_picture_image_url(:medium_thumb)) %>
+      <% end %>
+    <% else %>
+      <div class="preview-picture-placeholder well">&#x263A;</div>
+    <% end %>
+  </div>
+  <h4 class="media-heading"><%= person.fullname_with_prefix %></h4>
+  <div class="person-description">
+    <%= person.description.to_html.html_safe if person.description.present? %>
+  </div>
+  <div class="person-positions">
+    <table class="table">
+      <thead>
+        <tr>
+          <th><%= Ecm::Staff::PersonPosition.human_attribute_name(:position) %></th>
+          <th><%= Ecm::Staff::PersonPosition.human_attribute_name(:begin_at) %></th>
+          <th><%= Ecm::Staff::PersonPosition.human_attribute_name(:end_at) %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% person.person_positions.each do |person_position| %>
+          <%= render 'ecm/staff/person_positions/person_position_as_table_row', :person_position => person_position %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

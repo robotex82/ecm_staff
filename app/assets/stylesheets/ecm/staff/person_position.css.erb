@@ -1,0 +1,24 @@
+.person-preview .preview-picture-placeholder {
+  height: <%= Ecm::Pictures::Configuration.picture_image_styles[:medium_thumb].split("x").first %>px;
+  width:  <%= Ecm::Pictures::Configuration.picture_image_styles[:medium_thumb].split("x").last %>px;
+  text-align: center;
+  font-size: 64px;
+  line-height: <%= Ecm::Pictures::Configuration.picture_image_styles[:medium_thumb].split("x").first %>px;
+  padding: 0px;
+}
+
+
+.person-preview .media-heading {
+  height: <%= Ecm::Pictures::Configuration.picture_image_styles[:medium_thumb].split("x").first %>px;
+  line-height: <%= Ecm::Pictures::Configuration.picture_image_styles[:medium_thumb].split("x").first.to_i + 10 %>px;
+  margin-bottom: 10px;
+}
+
+.person-preview .person-positions {
+  clear: both;
+}
+
+.person-preview .table {
+  margin-left: auto;
+  margin-right: auto;
+}

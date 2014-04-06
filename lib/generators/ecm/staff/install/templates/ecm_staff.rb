@@ -12,5 +12,5 @@ Ecm::Staff.configure do |config|
   # Person model
   #
   # default: config.person_class_name = 'Person'
-  config.person_class_name = 'Person'
+  config.person_class_name = 'Ecm::Staff::Person'
 end # Ecm::Staff.configure
