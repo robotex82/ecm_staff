@@ -1,0 +1,117 @@
+
+--- 
+admin_users: 
+  columns: 
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - admin@example.com
+    - $2a$10$KzU5TrwoumDmzkEtOHguKOjtQR002xdocmJYxJPOf7qvDSl4FcasC
+    - 
+    - 
+    - 
+    - 1
+    - 2014-04-02 14:02:18.627260
+    - 2014-04-02 14:02:18.627260
+    - 192.168.0.36
+    - 192.168.0.36
+    - 2014-03-25 21:22:42.040866
+    - 2014-04-02 14:02:18.628413
+
+--- 
+ecm_staff_organisations: 
+  columns: 
+  - id
+  - name
+  - description
+  - markup_language
+  - slug
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Art der Gestaltung
+    - ""
+    - textile
+    - art-der-gestaltung
+    - 2014-04-02 16:26:44.061109
+    - 2014-04-02 16:26:44.061109
+  - - 2
+    - IT Services Frankfurt
+    - ""
+    - textile
+    - it-services-frankfurt
+    - 2014-04-02 16:27:01.051452
+    - 2014-04-02 16:27:01.051452
+  - - 3
+    - ANWR Group eG
+    - ""
+    - textile
+    - anwr-group-eg
+    - 2014-04-02 16:27:13.730323
+    - 2014-04-02 16:27:13.730323
+
+--- 
+ecm_staff_business_units: 
+  columns: 
+  - id
+  - organisation_id
+  - name
+  - description
+  - markup_language
+  - slug
+  - parent_id
+  - lft
+  - rgt
+  - depth
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 3
+    - Software Entwicklung Business Portale
+    - ""
+    - textile
+    - software-entwicklung-business-portale
+    - 
+    - 1
+    - 2
+    - 0
+    - 2014-04-02 16:27:41.260610
+    - 2014-04-02 16:27:41.260610
+  - - 2
+    - 3
+    - Business Development Business Portale
+    - ""
+    - textile
+    - business-development-business-portale
+    - 
+    - 3
+    - 4
+    - 0
+    - 2014-04-02 16:28:03.760314
+    - 2014-04-02 16:28:03.760314
+  - - 3
+    - 3
+    - ITK
+    - ""
+    - textile
+    - itk
+    - 
+    - 5
+    - 6
+    - 0
+    - 2014-04-02 16:28:20.433528
+    - 2014-04-02 16:28:20.433528

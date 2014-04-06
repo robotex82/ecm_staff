@@ -1,0 +1,9 @@
+<h2><%= organisation %></h2>
+
+<%= organisation.description.to_html.html_safe %>
+
+<% organisation.business_units.roots.all.each do |root_business_unit| %>
+  <%= render :partial => "ecm/staff/business_units/business_unit_list_item", :locals => { :business_unit => root_business_unit } %>
+<% end %>
+
+<hr />

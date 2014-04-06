@@ -1,0 +1,17 @@
+<div class="media", id="<%= dom_id(business_unit) %>">
+  <%= link_to "#", business_unit, :class => "pull-left" %>
+  <div class="media-body">
+    <h4 class="media-heading"><%= business_unit.to_s %></h4>
+    <%= business_unit.description.to_html.html_safe %>
+    <div class="person-positions">
+      <ul>
+      <% business_unit.person_positions.each do |person_position| %>
+        <li><%= render person_position %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% business_unit.children.each do |child| %>
+      <%= render :partial => "ecm/staff/business_units/business_unit_list_item", :locals => { :business_unit => child } %>
+    <% end unless business_unit.leaf? %>
+  </div>
+</div>

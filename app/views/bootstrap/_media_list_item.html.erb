@@ -1,0 +1,17 @@
+<div class="media", id="<%= dom_id(media_object) %>">
+  <%= link_to "#", "#", :class => "pull-left" %>
+  <div class="media-body">
+    <h4 class="media-heading"><%= media_object.to_s %></h4>
+    <p><%= media_object.description %></p>
+    <div class="person-positions">
+      <ul>
+      <% media_object.person_positions.each do |person_position| %>
+        <li><%= render person_position %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% media_object.children.each do |child| %>
+      <%= render :partial => "bootstrap/media_list_item", :locals => { :media_object => child } %>
+    <% end unless media_object.leaf? %>
+  </div>
+</div>

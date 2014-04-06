@@ -1,0 +1,5 @@
+<%= person_position.position %>: <%= link_to person_position.person, person_position.person %>
+<ul>
+  <li><%= Ecm::Staff::PersonPosition.human_attribute_name(:begin_at) %>: <%= person_position.begin_at %></li>
+  <li><%= Ecm::Staff::PersonPosition.human_attribute_name(:end_at) %>: <%= person_position.end_at %></li>
+</ul>
