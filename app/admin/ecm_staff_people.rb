@@ -43,9 +43,9 @@ ActiveAdmin.register Ecm::Staff::Person do
   index do
     selectable_column
     sortable_columns
-    column :preview_picture do |person|
-      if person.preview_picture.present?
-        image_tag(person.preview_picture_image_url(:small_thumb))
+    column :preview_picture do |ecm_staff_person|
+      if ecm_staff_person.preview_picture.present?
+        image_tag(ecm_staff_person.preview_picture_image_url(:small_thumb))
       else
         div(:class => 'preview-picture-placeholder') { '&#x263A'.html_safe }
       end
@@ -60,12 +60,12 @@ ActiveAdmin.register Ecm::Staff::Person do
   end # index
 
   show :title => :to_s do
-    panel Person.human_attribute_name(:description) do
-      person.description.to_html.html_safe
+    panel Ecm::Staff::Person.human_attribute_name(:description) do
+      ecm_staff_person.description.to_html.html_safe
     end # panel
 
-    panel Person.human_attribute_name(:person_positions) do
-      table_for person.person_positions, :i18n => Ecm::Staff::Person do
+    panel Ecm::Staff::Person.human_attribute_name(:person_positions) do
+      table_for ecm_staff_person.person_positions, :i18n => Ecm::Staff::Person do
         column :position
         column :begin_at
         column :end_at
@@ -82,9 +82,9 @@ ActiveAdmin.register Ecm::Staff::Person do
   end # show
 
   sidebar Ecm::Staff::Person.human_attribute_name(:details), :only => :show do
-    attributes_table_for person do
-    row :preview_picture do |person|
-      image_tag(person.preview_picture_image_url(:small_thumb)) unless person.preview_picture_image_url(:small_thumb).nil?
+    attributes_table_for ecm_staff_person do
+    row :preview_picture do |ecm_staff_person|
+      image_tag(ecm_staff_person.preview_picture_image_url(:small_thumb)) unless ecm_staff_person.preview_picture_image_url(:small_thumb).nil?
     end
     row :prefix
     row :fullname

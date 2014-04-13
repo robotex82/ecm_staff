@@ -60,6 +60,6 @@ de:
   resources:
     ecm_staff_business_units: abteilungen
     ecm_staff_organisations: unternehmen
-    ecm_staff_people: personen
+    ecm_staff_people: mitarbeiter
     ecm_staff_person_positions: besetzte-positionen
     ecm_staff_positions: positionen

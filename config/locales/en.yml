@@ -35,7 +35,7 @@ en:
 
       ecm/staff/person:
         birthdate: date of birth
-        firstname: firstnam
+        firstname: firstname
         lastname: lastname
         position: position
         prefix: prefix
