@@ -6,7 +6,7 @@ module Ecm
           config.load_paths << File.join(self.root, 'lib/ecm/staff/active_admin')
 
           config.register_stylesheet 'ecm_staff_active_admin.css'
-        end if defined?(::ActiveAdmin) # ::ActiveAdmin.setup
+        end
       end # initializer :ecm_staff_engine do
     end # class Engine < ::Rails::Engine
   end # module Staff

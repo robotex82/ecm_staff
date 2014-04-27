@@ -102,4 +102,4 @@ ActiveAdmin.register Ecm::Staff::Person do
     row :updated_at
     end
   end # sidebar
-end
+end if defined?(ActiveAdmin)

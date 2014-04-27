@@ -85,4 +85,4 @@ ActiveAdmin.register Ecm::Staff::BusinessUnit do
       row :updated_at
     end
   end # sidebar
-end
+end if defined?(ActiveAdmin)

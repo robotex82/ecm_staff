@@ -56,4 +56,4 @@ ActiveAdmin.register Ecm::Staff::Organisation do
       row :updated_at
     end
   end # sidebar
-end
+end if defined?(ActiveAdmin)

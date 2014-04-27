@@ -65,4 +65,4 @@ ActiveAdmin.register Ecm::Staff::Position do
       row :updated_at
     end
   end # sidebar
-end
+end if defined?(ActiveAdmin)
