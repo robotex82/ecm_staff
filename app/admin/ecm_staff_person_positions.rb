@@ -30,4 +30,24 @@ ActiveAdmin.register Ecm::Staff::PersonPosition do
     column :end_at
     default_actions
   end # index
+
+  show do
+    I18n.available_locales.each do |locale|
+      panel "#{Ecm::Staff::Position.human_attribute_name(:description)} - #{locale}" do
+        Globalize.with_locale(locale) { mu(ecm_staff_person_position.position, :description) }
+      end
+    end
+  end # show
+
+  sidebar Ecm::Staff::PersonPosition.human_attribute_name(:details), :only => :show do
+    attributes_table_for ecm_staff_person_position do
+      row :person
+      row :business_unit
+      row :position
+      row :begin_at
+      row :end_at
+      row :created_at
+      row :updated_at
+    end
+  end # sidebar
 end

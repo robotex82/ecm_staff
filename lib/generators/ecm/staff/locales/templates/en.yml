@@ -1,6 +1,7 @@
 en:
   attributes:
     created_at: created at
+    depth: depth
     description: description
     markup_language: markup language
     name: name
@@ -27,18 +28,25 @@ en:
     attributes:
 
       ecm/staff/business_unit:
+        children: sub business units
         organisation: organisation
         parent: parent organisation
+        people_count: people count
+        person_position: person positions
 
       ecm/staff/organisation:
         business_units: sub organisations
 
       ecm/staff/person:
+        age: age
         birthdate: date of birth
         firstname: firstname
+        fullname: name
         lastname: lastname
+        person_position: person positions
         position: position
         prefix: prefix
+        preview_picture: picture
 
       ecm/staff/person_position:
         begin_at: begin at
@@ -63,3 +71,7 @@ en:
     ecm_staff_people: people
     ecm_staff_person_positions: person-positions
     ecm_staff_positions: positions
+
+  views:
+    actions:
+      back: 'back'

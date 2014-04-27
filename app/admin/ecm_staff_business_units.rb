@@ -11,9 +11,9 @@ ActiveAdmin.register Ecm::Staff::BusinessUnit do
       f.input :parent, :as => :select, :collection => nested_set_options(Ecm::Staff::BusinessUnit, f.object) { |bu| "#{'&#160;&#160;&#160;&#160;' * bu.depth}&bull; #{bu.to_s}".html_safe }
     end # f.inputs
 
-    f.inputs do
-      f.input :name
-      f.input :description
+    f.translate_inputs do |t|
+      t.input :name
+      t.input :description
     end # f.inputs
 
     f.inputs do
@@ -36,9 +36,11 @@ ActiveAdmin.register Ecm::Staff::BusinessUnit do
   end # def
 
   show :title => :to_s do
-    panel Ecm::Staff::BusinessUnit.human_attribute_name(:description) do
-      ecm_staff_business_unit.description.to_html.html_safe
-    end # panel
+    I18n.available_locales.each do |locale|
+      panel "#{Ecm::Staff::BusinessUnit.human_attribute_name(:description)} - #{locale}" do
+        Globalize.with_locale(locale) { ecm_staff_business_unit.description.to_html.html_safe }
+      end
+    end
 
     panel Ecm::Staff::BusinessUnit.human_attribute_name(:children) do
       table_for ecm_staff_business_unit.descendants, :i18n => Ecm::Staff::BusinessUnit do

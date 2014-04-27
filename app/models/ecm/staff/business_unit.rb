@@ -15,6 +15,11 @@ class Ecm::Staff::BusinessUnit < Ecm::Staff::Base
   # callbacks
   after_initialize :set_defaults
 
+  # globalization support
+  translates :description, :name, :slug
+  attr_accessible :translations, :translations_attributes
+  accepts_nested_attributes_for :translations
+
   # default scope
   default_scope :order => 'lft'
 

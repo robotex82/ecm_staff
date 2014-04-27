@@ -1,0 +1,14 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th><%= Ecm::Staff::PersonPosition.human_attribute_name(:position) %></th>
+      <th><%= Ecm::Staff::PersonPosition.human_attribute_name(:begin_at) %></th>
+      <th><%= Ecm::Staff::PersonPosition.human_attribute_name(:end_at) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% person.person_positions.each do |person_position| %>
+      <%= render 'ecm/staff/person_positions/person_position_as_table_row', :person_position => person_position %>
+    <% end %>
+  </tbody>
+</table>

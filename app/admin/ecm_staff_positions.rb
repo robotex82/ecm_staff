@@ -32,4 +32,37 @@ ActiveAdmin.register Ecm::Staff::Position do
     column :updated_at
     default_actions
   end # index
+
+  show do
+    I18n.available_locales.each do |locale|
+      panel "#{Ecm::Staff::Position.human_attribute_name(:description)} - #{locale}" do
+        Globalize.with_locale(locale) { mu(ecm_staff_position, :description) }
+      end # panel
+    end # I18n.available_locales
+
+    panel Ecm::Staff::Position.human_attribute_name(:person_positions) do
+      table_for ecm_staff_position.person_positions, :i18n => Ecm::Staff::PersonPosition do
+        column :person
+        column :begin_at
+        column :end_at
+        column :created_at
+        column :updated_at
+        column do |pp|
+          link_to(I18n.t('active_admin.view'), [:admin, pp], :class => "member_link view_link") +
+          link_to(I18n.t('active_admin.edit'), [:edit, :admin, pp], :class => "member_link edit_link")
+        end # column
+      end # table_for
+    end # panel
+  end # show
+
+  sidebar Ecm::Staff::Position.human_attribute_name(:details), :only => :show do
+    attributes_table_for ecm_staff_position do
+      row :name
+      row :parent
+      row :depth
+      row :markup_language
+      row :created_at
+      row :updated_at
+    end
+  end # sidebar
 end

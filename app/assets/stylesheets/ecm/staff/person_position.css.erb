@@ -12,7 +12,7 @@
   width: <%= Ecm::Pictures::Configuration.picture_image_styles[:medium_thumb].split("x").last %>px;
 }
 
-.person-preview .media-heading {
+.person-preview .media-heading, .person-preview .media-heading h4 {
   height: <%= Ecm::Pictures::Configuration.picture_image_styles[:medium_thumb].split("x").first %>px;
   line-height: <%= Ecm::Pictures::Configuration.picture_image_styles[:medium_thumb].split("x").first.to_i + 10 %>px;
   margin-bottom: 10px;

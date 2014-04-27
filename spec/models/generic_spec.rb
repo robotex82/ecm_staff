@@ -1,7 +1,9 @@
 require 'spec_helper'
 
+EXCLUDED_MODELS = %w(ActiveAdmin::Comment AdminUser Ecm::Pictures::PictureGallery Ecm::Pictures::Picture Ecm::Pictures::AttachedPicture Ecm::Staff::Base Ecm::Staff::Organisation::Translation Globalize::ActiveRecord::Translation)
+
 describe "ActiveRecord::Base models" do
-  ActiveRecord::Base.descendants.map(&:to_s).reject() { |m| %w(ActiveAdmin::Comment AdminUser Ecm::Pictures::PictureGallery Ecm::Pictures::Picture Ecm::Pictures::AttachedPicture Ecm::Staff::Base).include?(m) }.each do |model_name|
+  ActiveRecord::Base.descendants.map(&:to_s).reject() { |m| EXCLUDED_MODELS.include?(m) }.each do |model_name|
     model = model_name.constantize
     describe model do
       it "should be an ActiveRecord::Base" do

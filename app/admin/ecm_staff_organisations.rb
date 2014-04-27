@@ -2,9 +2,9 @@ ActiveAdmin.register Ecm::Staff::Organisation do
   menu :parent => Proc.new { I18n.t('ecm.staff.active_admin.menu') }.call
 
   form do |f|
-    f.inputs do
-      f.input :name
-      f.input :description
+    f.translate_inputs do |t|
+      t.input :name
+      t.input :description
     end # f.inputs
 
     f.inputs do
@@ -24,9 +24,11 @@ ActiveAdmin.register Ecm::Staff::Organisation do
   end # index
 
   show :title => :to_s do
-    panel Ecm::Staff::Organisation.human_attribute_name(:description) do
-      ecm_staff_organisation.description.to_html.html_safe
-    end # panel
+    I18n.available_locales.each do |locale|
+      panel "#{Ecm::Staff::Organisation.human_attribute_name(:description)} - #{locale}" do
+        Globalize.with_locale(locale) { ecm_staff_organisation.description.to_html.html_safe }
+      end
+    end
 
     panel Ecm::Staff::Organisation.human_attribute_name(:business_units) do
       table_for ecm_staff_organisation.business_units, :i18n => Ecm::Staff::BusinessUnit do
@@ -46,7 +48,9 @@ ActiveAdmin.register Ecm::Staff::Organisation do
 
   sidebar Ecm::Staff::Organisation.human_attribute_name(:details), :only => :show do
     attributes_table_for ecm_staff_organisation do
-      row :name
+      I18n.available_locales.each do |locale|
+        Globalize.with_locale(locale) { row :name }
+      end
       row :markup_language
       row :created_at
       row :updated_at

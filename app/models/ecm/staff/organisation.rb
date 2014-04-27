@@ -10,9 +10,14 @@ class Ecm::Staff::Organisation < Ecm::Staff::Base
   # callbacks
   after_initialize :set_defaults
 
+  # globalization support
+  translates :description, :name, :slug
+  attr_accessible :translations, :translations_attributes
+  accepts_nested_attributes_for :translations
+
   # friendly id support
   extend FriendlyId
-  friendly_id :name, :use => :slugged
+  friendly_id :name, :use => [ :slugged, :globalize ]
 
   # markup support
   acts_as_markup :language => :variable,

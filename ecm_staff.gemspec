@@ -25,6 +25,8 @@ Gem::Specification.new do |s|
   s.add_dependency "awesome_nested_set"
   s.add_dependency "ecm_pictures", ">= 1.0.6.pre"
   s.add_dependency "friendly_id"
+  s.add_dependency "globalize", "~> 3.1.0"
+  s.add_dependency "activeadmin-translate"
 
   s.add_development_dependency "sqlite3"
 

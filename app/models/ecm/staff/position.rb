@@ -5,10 +5,17 @@ class Ecm::Staff::Position < Ecm::Staff::Base
                     :class_name => Ecm::Staff::Configuration.person_class_name
 
   # attributes
-  attr_accessible :description, :name, :parent_id
+  attr_accessible :description,
+                  :name,
+                  :parent_id
 
   # callbacks
   after_initialize :set_defaults
+
+  # globalization support
+  translates :description, :name, :slug
+  attr_accessible :translations, :translations_attributes
+  accepts_nested_attributes_for :translations
 
   # friendly id support
   extend FriendlyId

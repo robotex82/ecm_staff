@@ -1,6 +1,7 @@
 de:
   attributes:
     created_at: Erstellt am
+    depth: Tiefe
     description: Beschreibung
     markup_language: Markup Sprache
     name: Name
@@ -15,8 +16,8 @@ de:
         one: Unternehmen
         other: Unternehmen
       ecm/staff/person:
-        one: Person
-        other: Personen
+        one: Mitarbeiter
+        other: Mitarbeiter
       ecm/staff/person_position:
         one: Besetzte Position
         other: Besetzte Positionen
@@ -27,30 +28,37 @@ de:
     attributes:
 
       ecm/staff/business_unit:
+        children: Untergeordnete Abteilungen
         organisation: Unternehmen
         parent: Übgergeordnete Abteilung
+        people_count: Mitarbeiter
+        person_positions: Besetzte Positionen
 
       ecm/staff/organisation:
         business_units: Untergeordnete Abteilungen
 
       ecm/staff/person:
+        age: Alter
         birthdate: Geburtsdatum
         firstname: Vorname
+        fullname: Name
         lastname: Nachname
+        person_positions: Besetzte Positionen
         position: Position
-        prefix: Namensprefix
+        prefix: Prefix
+        preview_picture: Bild
 
       ecm/staff/person_position:
         begin_at: Seit
         business_unit: Abteilung
         end_at: Bis
         organisation: Unternehmen
-        person: Person
+        person: Mitarbeiter
         position: Position
 
       ecm/staff/position:
         parent: Übergeordnete Position
-        people_count: Personen
+        people_count: Mitarbeiter
 
   ecm:
     staff:
@@ -63,3 +71,7 @@ de:
     ecm_staff_people: mitarbeiter
     ecm_staff_person_positions: besetzte-positionen
     ecm_staff_positions: positionen
+
+  views:
+    actions:
+      back: 'Zurück'

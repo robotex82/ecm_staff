@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140406155822) do
+ActiveRecord::Schema.define(:version => 20140426084922) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -81,6 +81,19 @@ ActiveRecord::Schema.define(:version => 20140406155822) do
     t.datetime "updated_at",         :null => false
   end
 
+  create_table "ecm_staff_business_unit_translations", :force => true do |t|
+    t.integer  "business_unit_id"
+    t.string   "locale",           :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.text     "description"
+    t.string   "slug"
+    t.string   "name"
+  end
+
+  add_index "ecm_staff_business_unit_translations", ["business_unit_id"], :name => "index_cc00704703780d8b9055f73177cca693f3a1d0ed"
+  add_index "ecm_staff_business_unit_translations", ["locale"], :name => "index_ecm_staff_business_unit_translations_on_locale"
+
   create_table "ecm_staff_business_units", :force => true do |t|
     t.integer  "organisation_id"
     t.string   "name"
@@ -97,6 +110,19 @@ ActiveRecord::Schema.define(:version => 20140406155822) do
 
   add_index "ecm_staff_business_units", ["organisation_id"], :name => "index_ecm_staff_business_units_on_organisation_id"
   add_index "ecm_staff_business_units", ["parent_id"], :name => "index_ecm_staff_business_units_on_parent_id"
+
+  create_table "ecm_staff_organisation_translations", :force => true do |t|
+    t.integer  "organisation_id"
+    t.string   "locale",          :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.text     "description"
+    t.string   "slug"
+    t.string   "name"
+  end
+
+  add_index "ecm_staff_organisation_translations", ["locale"], :name => "index_ecm_staff_organisation_translations_on_locale"
+  add_index "ecm_staff_organisation_translations", ["organisation_id"], :name => "index_ec7eecd88462db07cbe6bb6d0465dff84bb8b9db"
 
   create_table "ecm_staff_organisations", :force => true do |t|
     t.string   "name"
@@ -133,6 +159,32 @@ ActiveRecord::Schema.define(:version => 20140406155822) do
   add_index "ecm_staff_person_positions", ["business_unit_id"], :name => "index_ecm_staff_person_positions_on_business_unit_id"
   add_index "ecm_staff_person_positions", ["person_id"], :name => "index_ecm_staff_person_positions_on_person_id"
   add_index "ecm_staff_person_positions", ["position_id"], :name => "index_ecm_staff_person_positions_on_position_id"
+
+  create_table "ecm_staff_person_translations", :force => true do |t|
+    t.integer  "person_id"
+    t.string   "locale",      :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.text     "description"
+    t.string   "prefix"
+    t.string   "slug"
+  end
+
+  add_index "ecm_staff_person_translations", ["locale"], :name => "index_ecm_staff_person_translations_on_locale"
+  add_index "ecm_staff_person_translations", ["person_id"], :name => "index_ecm_staff_person_translations_on_ecm_staff_person_id"
+
+  create_table "ecm_staff_position_translations", :force => true do |t|
+    t.integer  "position_id"
+    t.string   "locale",      :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.text     "description"
+    t.string   "slug"
+    t.string   "name"
+  end
+
+  add_index "ecm_staff_position_translations", ["locale"], :name => "index_ecm_staff_position_translations_on_locale"
+  add_index "ecm_staff_position_translations", ["position_id"], :name => "index_ecm_staff_position_translations_on_ecm_staff_position_id"
 
   create_table "ecm_staff_positions", :force => true do |t|
     t.string   "name"

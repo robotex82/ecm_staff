@@ -7,16 +7,19 @@ ActiveAdmin.register Ecm::Staff::Person do
   sortable_member_actions
 
   form do |f|
+    f.translate_inputs do |t|
+      t.input :prefix
+    end # f.inputs
+
     f.inputs do
-      f.input :prefix
       f.input :firstname
       f.input :lastname
       f.input :birthdate, :as => :datepicker
     end
 
-    f.inputs do
-      f.input :description
-    end
+    f.translate_inputs do |t|
+      t.input :description
+    end # f.inputs
 
     f.inputs do
       f.input :markup_language, :as => :select, :collection => Ecm::Staff::Configuration.markup_languages.map(&:to_s)
@@ -53,19 +56,23 @@ ActiveAdmin.register Ecm::Staff::Person do
     column :prefix
     column :firstname
     column :lastname
-    column :age
+    column :age, :sortable => false
+    column :birthdate
     column :created_at
     column :updated_at
     default_actions
   end # index
 
   show :title => :to_s do
-    panel Ecm::Staff::Person.human_attribute_name(:description) do
-      ecm_staff_person.description.to_html.html_safe
-    end # panel
+    I18n.available_locales.each do |locale|
+      panel "#{Ecm::Staff::Person.human_attribute_name(:description)} - #{locale}" do
+#       Globalize.with_locale(locale) { mu(ecm_staff_person, :description) }
+        Globalize.with_locale(locale) { ecm_staff_person.description.to_html.html_safe }
+      end
+    end
 
     panel Ecm::Staff::Person.human_attribute_name(:person_positions) do
-      table_for ecm_staff_person.person_positions, :i18n => Ecm::Staff::Person do
+      table_for ecm_staff_person.person_positions, :i18n => Ecm::Staff::PersonPosition do
         column :position
         column :begin_at
         column :end_at
@@ -89,6 +96,7 @@ ActiveAdmin.register Ecm::Staff::Person do
     row :prefix
     row :fullname
     row :age
+    row :birthdate
     row :markup_language
     row :created_at
     row :updated_at
