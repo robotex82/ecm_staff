@@ -1,12 +1,15 @@
 
-n.n.n / 2014-04-06 
-==================
+0.0.1.pre / 2014-04-27
+======================
 
-  * Basic admin area First shot at organisation and business unit frontend
-  * Added models Added translations
-  * first commit
-
-n.n.n / 2014-03-16 
-==================
-
-  * first commit
+  * Finished 0.0.1.pre
+  * Better i18n
+  * Small design fixes
+  * Moved people model into module
+  * Lots of improvments
+  * Better frontend
+  * Basic admin area
+  * First shot at organisation and business unit frontend
+  * Added models
+  * Added translations
+  * First commit
